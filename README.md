@@ -1,7 +1,7 @@
 # Flask-Basic
 
 This repo contains the basic implementation of Flask. 
-The code in this repo connects with the [Elephant SQL](https://www.elephantsql.com/) which is a hosted Postgres server.
+The code in this repo connects with the [Elephant SQL](https://www.elephantsql.com/) a hosted Postgres server.
 
 First, create a virtual environment.
 
@@ -22,3 +22,5 @@ To run the application
 ```
 python3 app.py
 ```
+
+Also, create a .env file locally that contains all the credentials provided by Elephant SQL.
