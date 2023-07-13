@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'styles.css') }}">
+    <title>Blog Application</title>
+</head>
+
+
+<body>
+    <div class="container">
+
+        <form method="post">
+            <h3>Enter Detail about students</h3>
+            <div class="form-class">
+
+                <label for="name">Name:</label>
+                <input type="text" placeholder="Enter Name" maxlength="50" required="True" name="name" id="name">
+            </div>
+            <br>
+            <div class="form-class">
+                <label for="roll">Roll:</label>
+                <input type="text" placeholder="Roll" maxlength="15" required="True" name="roll" id="roll">
+            </div>
+            <br>
+            <button class="submit-btn" type="submit"> Submit </button>
+        </form>
+    </div>
+    <div class="view">
+        <h4>To display the information about the student in database Click <a href="#">Here</a></h4>
+    </div>
+    <div class="data">
+        <table>
+            <tr class="title">
+                <td>
+                    <b>Name</b>
+                </td>
+                <td><b>Roll</b></td>
+            </tr>
+            {% for a in data %}
+
+            <tr>
+                {% for b in a %}
+                <td>
+                    {{ b }}
+                </td>
+                {% endfor %}
+            </tr>
+
+
+            {% endfor %}
+
+        </table>
+    </div>
+
+</body>
+
+</html>
